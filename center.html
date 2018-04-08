@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./src/login.css">
+    <style>
+        body {
+            color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+
+        .channel-content {
+            background-color: #001c38;
+            padding: 50px;
+        }
+
+        .section-1 {
+        }
+
+        .receive-address-container {
+            border: 2px solid hsla(0, 0%, 100%, .5);
+            border-radius: 10px;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .receive-address-container .first-left{
+            flex: 1;
+
+        }
+        .receive-address-container .first-right{ flex: 1 }
+        .receive-address-container .first-right p{ line-height: 38px }
+
+        #ethaddress {
+            float: left;
+        }
+
+        .record {
+            font-size: 18px
+        }
+
+        .qrcode {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin-top:10px;
+        }
+        #code{
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin-top:10px;
+        }
+
+        input {
+            width: 500px;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+
+        #copy {
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #query {
+            font-size: 18px;
+            width: 100px;
+            height: 57px;
+            line-height: 57px;
+            border-radius: 5px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        .tbrecord{
+            width: 100%;
+
+            border: 1px solid #fff;
+            text-align: center;
+        }
+
+        #error-item{ color: #333; display: none }
+        #app-item{ display: none }
+    </style>
+</head>
+<body>
+<div id="error-item"></div>
+<div id="app-item">
+    <div id="r-my-order" class="channel-content" style=" text-align: center">
+        <div style="max-width:1200px; text-align: left; margin: auto">
+            <h3>Token Sell</h3>
+            <div>
+                <section class="section-1">
+                    <div class="receive-address-container">
+                        <div class="first-left">
+                            <p>ESS 官方兌換：以太坊地址</p>
+                            <span id="ethaddress">0x489145b56fbdf47005fc2b0fadcfa7035ddf2ead</span>
+                            <button id="copy">複製</button>
+                            <span id="code"></span>
+                            <!--<img src="./src/addressQR.png" alt="" class="qrcode">-->
+                            <p>注意：禁止往此地址轉入非ETH資產，以防資產丟失</p>
+                        </div>
+
+                        <div class="first-right">
+                            <h3>Token說明</h3>
+                            <p>總量：999999999枚(恆量)<br/>
+                                Token Sell：3億枚<br/>
+                                Token 比例：1ETH:8000ESS<br/>
+                                鎖倉：50%<br/>
+                                釋放週期：20%/月，5個月釋放完畢</p>
+                        </div>
+                    </div>
+
+                </section>
+                <!--<section class="section-2">-->
+                <!--<h3>投資說明</h3>-->
+                <!--<p>代幣總量：代幣10億，3億私募，比例1：8000，然後首次到賬50%，即是4000個，鎖倉50%即是4000個，然後每個月釋放鎖倉部分的20%，即是800個，5個月釋放完畢。</p>-->
+
+                <!--</section>-->
+                <section class="section-2">
+                    <h3>查詢</h3>
+                    <input type="text" placeholder="請輸入您的錢包地址" name="address" class="record" id="hook-address">
+                    <button id="query">查詢</button>
+                </section>
+                <section class="section-2">
+                    <h3>查詢結果</h3>
+                    <table class="tbrecord">
+                        <thead>
+                        <tr>
+                            <th>時間</th>
+                            <th>兌換ETH數量</th>
+                            <th>應發ESS數量</th>
+                            <th>已發ESS數量</th>
+                            <th>鎖倉ESS數量</th>
+                            <th>下期解倉數量</th>
+                        </tr>
+                        </thead>
+                        <tbody id="hook-account-info"></tbody>
+                    </table>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <div style=" text-align: center; padding: 20px 0 80px 0">
+        <h3 style="color: #333; padding: 20px 0; margin: auto">機構兌換獎勵規則</h3>
+        <p style="max-width:1000px; color: #333; padding: 0 40px; text-align: left; margin: auto">
+
+            1.機構認領期間，每次兌換ESS，均會按照1ETH=8000ESS的比例，自動兌換。並按照總量25%的獎勵比例自動結算當次獎勵。<br><br>
+            2.當次的兌換及獎勵總數的50%，原路返到您轉出ETH的地址。剩餘50%鎖倉，按照系統時間每月原路釋放20%，共計五個月釋放完畢。<br><br>
+            3.活動期間每個地址每次兌換，系統將累計當前地址兌換ETH的總量，並按照協議，在活動結束後統計相對應獎勵，如獎勵檔位超過25%的，活動結束後3個工作日內，按照當前地址一次補齊。
+        </p>
+    </div>
+</div>
+
+
+<div class="dialog-mask" style="background: #001e3b"></div>
+
+<div class="dialog" id="dialog-login">
+    <div class="btn-close"></div>
+    <ul class="tabs">
+        <li class="tab active" data-i18n="DIALOG_LOGIN_TITLE">登錄</li>
+        <!--<li class="tab" data-i18n="DIALOG_REGISTER_TITLE">註冊</li>-->
+    </ul>
+    <div class="form">
+        <div class="form-group" id="login-email">
+            <div class="input-wrapper">
+                <input id="hook-username" type="text" data-i18n-placeholder="DIALOG_LOGIN_EMAIL" placeholder="賬號">
+            </div>
+        </div>
+        <div class="form-group" id="login-password">
+            <div class="input-wrapper">
+                <input id="hook-password" type="password" data-i18n-placeholder="DIALOG_LOGIN_PASSWORD" placeholder="密碼">
+            </div>
+        </div>
+        <!--<div class="form-group image-captcha" id="login-captcha-image">
+            <div class="input-wrapper">
+                <input type="text" data-i18n-placeholder="DIALOG_LOGIN_IMAGE_CAPTCHA" placeholder="圖形驗證碼">
+            </div>
+            <img src="./src/vercode" alt="">
+        </div>-->
+        <div class="form-group">
+            <button class="btn btn-primary" id="btn-login" data-i18n="DIALOG_LOGIN_BTN_LOGIN">登錄</button>
+        </div>
+        <!--<div class="form-group options">
+            <label for="login-remember" class="checkbox">
+                <input type="checkbox" id="login-remember">
+                <span data-i18n="DIALOG_LOGIN_REMEMBER">記住我</span>
+            </label>
+            <a href="javascript:;" data-i18n="DIALOG_LOGIN_FORGET">忘記密碼？</a>
+        </div>-->
+    </div>
+</div>
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./src/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="./src/jquery.md5.js"></script>
+<script type="text/javascript" src="./src/clipBoard.min.js"></script>
+<script type="text/javascript" src="./src/cookie.js"></script>
+<script type="text/javascript" src="./src/date-format.js"></script>
+<!--<script type="text/javascript" src="./src/login.js"></script>-->
+<script type="text/javascript" src="./src/clipBoard.min.js"></script>
+
+<script>
+    (function () {
+        //var domain = "http://47.52.170.220:8080/etss",
+         var domain = "/etss",
+            api_islogin = "/api/v1/user/islogin",
+            api_info = "/api/v1/account/",
+            api_login = "/api/v1/user/login";
+        var dom_mask = $(".dialog-mask"),    //弹层背景
+            dom_login = $('#dialog-login'),    //登录框
+            dom_app = $('#app-item'),    //应用容器
+            dom_error = $('#error-item');
+        var dom_info = $('#hook-account-info');    //信息表
+        var inp_addr = $('#hook-address');    //查询信息依赖的 钱包地址
+        var inp_username = $('#hook-username'),
+            inp_password = $('#hook-password');
+        var box_address = $('#ethaddress');
+        var cookieName = "cookieToken",
+            cookieToken = Cookie(cookieName) || "";    //cookie
+
+        /**登录提交**/
+        $('#btn-login').on('click', function () {
+            var username = $.trim(inp_username.val()),
+                password = $.trim(inp_password.val());
+            if(!username || !password) return;
+            var formData = {
+                userName: username,
+                password: $.md5(password)
+            };
+            $.ajax({
+                'type' : "POST",
+                'url' : domain + api_login,
+                'headers': {
+                    Accept: "application/json; charset=utf-8"
+                },
+                'contentType' : "application/json",
+                'data' : JSON.stringify(formData),
+                'dataType' : 'json',
+                'success' : function (res) {
+                      /*email:"cc@126.com"
+                        mobile:"18888888888"
+                        token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpdGEiOjE1MTc0OTEyNzc4NjgsInVzZXJOYW1lIjoiY2NfdGVzdCIsImV4cCI6MTUxNzU3NzY3NywidXNlcklkIjoxfQ.TUn1JTh_pLW5-KatESoAFwD9pBe530nMko-xZmMDuSc"
+                        userName:"cc_test"*/
+                    if(res.responseCode == 1 || res.responseCode == '1'){
+                        Cookie(cookieName, res.responseData.token);
+                        dom_error.hide();
+                        dom_login.hide();
+                        dom_mask.hide();
+                        dom_app.show();
+                    }else{
+                        dom_error.show().text(res.responseMessage);
+                        inp_username.val('');
+                        inp_password.val('');
+                    }
+
+                },
+                'error': function (e) {
+                    console.log(e)
+                }
+            });
+        });
+
+        /**信息查询**/
+        $('#query').on('click', function () {
+            var coinAddr = $.trim(inp_addr.val());    //"0x086db7396e45924effa7ab193c7fb75196166f37"
+            if(!coinAddr) return;
+            $.ajax({
+                url: domain + api_info + coinAddr,
+                type:"get",
+                success: function (res) {
+                    if(res.responseCode == 1 || res.responseCode == '1'){
+                        if(res.responseData.length>0){
+
+                              /*address:"0x086db7396e45924effa7ab193c7fb75196166f37"
+                                balanceAmount:0.4          //锁仓数量
+                                id:5
+                                lastSentDate:1519747200000
+                                nextSendAmount:0.1         //下期解仓数量
+                                nextSendDate:1522166400000
+                                planAmount:1               //应发数量
+                                rechargeDate:1517241600000 //时间
+                                rechargeEthAmount:0.001    //兑换数量
+                                sendTimes:0
+                                sentAmount:0.6             //已发数量*/
+
+                            var data = res.responseData;
+                            var htmlStr = '';
+                            for(var i=0; i<data.length; i++){
+                                htmlStr += '<tr>' +
+                                    '<td>'+new Date(data[i].rechargeDate).Format('yyyy.MM.dd HH:mm')+'</td>' +
+                                    '<td>'+data[i].rechargeEthAmount+'</td>' +
+                                    '<td>'+data[i].planAmount+'</td>' +
+                                    '<td>'+data[i].sentAmount+'</td>' +
+                                    '<td>'+data[i].balanceAmount+'</td>' +
+                                    '<td>'+data[i].nextSendAmount+'</td>' +
+                                    '</tr>';
+                            }
+                            dom_info.html(htmlStr);
+                        }else{
+                            dom_info.html('<tr><td colspan="6">尚无数据</td></tr>');
+                        }
+                    }else{
+                        dom_info.html('<tr><td colspan="6">'+res.responseMessage+'</td></tr>');
+                    }
+                },
+                error: function (e) {
+                    dom_info.html('<tr><td colspan="6">查询失败！</td></tr>');
+                }
+            });
+        });
+
+        $(function () {
+            $("#code").qrcode({
+                width: 256,   //默认宽度
+                height: 256, //默认高度
+                size: 140,
+                correctLevel : 0,
+                render : "table",
+                background: "#fff",  //背景颜色
+                text : "0x489145b56fbdf47005fc2b0fadcfa7035ddf2ead"
+            });
+            //复制
+            $("#copy").click(function () {
+                var test = new clipBoard($('#ethaddress')[0], {
+                    beforeCopy: function () {
+                        //alert('开始复制');
+                    },
+                    copy      : function () {
+                        return $('#ethaddress').text();
+                    },
+                    afterCopy : function () {
+                        alert('复制成功！');
+                    },
+                });
+            })
+            //是否登录 http://localhost:3001/test http://47.52.170.220:8080/etss/api/v1/user/islogin
+            $.ajax({
+                type: "GET",
+                url: domain + api_islogin,
+                headers: {
+                    Accept: "application/json; charset=utf-8",
+                    token: cookieToken
+                },
+                beforeSend: function(request) {
+                    request.setRequestHeader("token", cookieToken);
+                },
+                success: function (res) {
+                    /*
+                    "mobile":null,
+                    "userName":"cc_test",
+                    "email":null,
+                    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpdGEiOjE1MTc0OTM2MjM3MjIsInVzZXJOYW1lIjoiY2NfdGVzdCIsImV4cCI6MTUxNzU4MDAyMywidXNlcklkIjoxfQ.Zq3NWETWz_vsowfWYGwRj93D1UiaxanO5Nkyr4SEKps"*/
+                    if(res.responseCode == 1 || res.responseCode == '1'){
+                        //box_address.text();
+                        dom_app.show();
+                    }else{
+                        //dom_error.show().text(res.responseMessage);
+                        dom_mask.show();
+                        dom_login.show();
+                    }
+                },
+                error: function (e) {
+                    dom_error.show().text('应用加载失败，请刷新重试');
+                }
+            });
+        })
+    }());
+
+
+
+</script>
+</body>
+</html>

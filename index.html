@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, userscalable=no, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4F29FE">
+    <meta name="theme-color" content="#4F29FE">
+    <title>以太秀秀去中心化的分布式的記帳系統</title>
+    <link rel="stylesheet" href="./src/normalize.css">
+    <link rel="stylesheet" href="./src/index.css?v=15">
+    <meta name="keywords" content="influence,chain,inc,token">
+    <meta name="description" content="Influence chain creates a token based ecosystem that exploits the advantages of private blockchain by building up a token exchange where influential power (individualized intellectual property) can be monetized into digital assets for the token holders.">
+    <meta name="author" content="dlab">
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta name="google-site-verification" content="OJFTB84AlCUhV2snj2phvZ1W2RZR543EAhCDfgtK2TE">
+    <!--[if lte IE 9]>
+    <script src='./home-assets/lib/html5shiv.min.js'></script>
+    <script src='./home-assets/lib/IE9.js'></script>
+    <script src='./home-assets/lib/es5-sham.min.js'></script>
+    <script src='./home-assets/lib/es5-shim.min.js'></script>
+    <![endif]-->
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .anchor {
+            height: 50px
+        }
+        /*锚点*/
+        
+        #hook-documents-win {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1000;
+            display: none;
+        }
+        
+        #hook-documents-win .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            opacity: 0.7
+        }
+        
+        #hook-documents-win .content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center
+        }
+        
+        #hook-documents-win img {
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%
+        }
+        
+        ul.block-01 {
+            margin: auto;
+            color: #666;
+            padding: 0 0 25px 0
+        }
+        
+        ul.block-01:after {
+            content: ".";
+            clear: both;
+            display: block;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden
+        }
+        
+        ul.block-01 li {
+            float: left;
+            width: 33%;
+            padding-top: 30px;
+            margin: auto
+        }
+        
+        ul.block-01 li div {
+            display: inline-block;
+            margin: auto;
+            text-align: left
+        }
+        
+        ul.block-01 li div p {
+            font-size: 14px
+        }
+        
+        .article3 h4 {
+            padding-bottom: 10px;
+            border-bottom: #5e63a2 1px solid
+        }
+        
+        @media(min-width:768px) {
+            ul.block-01 {
+                width: 90%
+            }
+            ul.block-01 li {}
+            ul.block-01 li:last-child {
+                border: 0
+            }
+        }
+        
+        @media(max-width:768px) {
+            ul.block-01 li:nth-child(1) {
+                padding-top: 10px
+            }
+            ul.block-01 li {
+                width: 100%
+            }
+            .article3 {
+                width: 100%!important;
+            }
+            .hook-documents {
+                padding: 4px 8px!important;
+            }
+        }
+        
+        #bgitem {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #04022e;
+            background-image: url(src/bg2.jpg);
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat
+        }
+        
+        #particles-js {
+            width: 100%;
+            height: 100%;
+            opacity: 0.25;
+        }
+    </style>
+
+    <!--百度统计-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e52fb44353e8bc119c537e0b95c5b706";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body>
+    <div id="hook-documents-win">
+        <div class="bg"></div>
+        <div class="content">
+            <img src="./src/documents.jpg">
+        </div>
+    </div>
+
+    <div id="bgitem">
+        <div id="particles-js">
+            <canvas class="particles-js-canvas-el" width="1540" height="1286" style="width: 500px; height: 500px"></canvas>
+        </div>
+    </div>
+
+    <!--
+主页：anchor-home
+
+优势： anchor-market
+
+解决方案：anchor-project
+
+代币用途：anchor-use
+
+代币应用： anchor-scene
+
+战略合作：anchor-cooperation
+
+白皮书：anchor-book
+
+以太秀秀：anchor-etss
+
+时间轴：anchor-time
+
+免責聲明：anchor-statement
+-->
+
+    <div id="body-container">
+        <header id="main-header">
+            <div class="container">
+                <div class="left">
+                    <a href="#" class="logo">
+                        <img src="./src/logo.png" alt="" style="max-height: 40px">
+                    </a>
+                    <nav id="nav-menu">
+                        <ul>
+                            <li><a href="#anchor-home" data-i18n="NAV_HOME" class="anchor-btn">主頁</a></li>
+                            <li><a href="javascript:void(0);" data-i18n="NAV_02" class="anchor-btn btn-documents">项目定位</a></li>
+                            <li><a href="#anchor-market" data-i18n="NAV_03" class="anchor-btn">项目思路</a></li>
+                            <li><a href="#anchor-scene" data-i18n="NAV_04" class="anchor-btn">应用场景</a></li>
+                            <li><a href="#anchor-team" data-i18n="NAV_05" class="anchor-btn">團隊介绍</a></li>
+                            <li><a href="#anchor-etss" data-i18n="NAV_06" class="anchor-btn">Token</a></li>
+                            <li><a href="https://etherscan.io/blocks_forked" target="_blank" data-i18n="NAV_07">區塊瀏覽器</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="right">
+                    <div id="language-selector">
+                        <div class="current-language">
+                            <p></p>
+                        </div>
+                        <ul>
+                            <li data-language="en-US"><span data-i18n="CURRENT_LANGUAGE_EN">English</span></li>
+                            <li data-language="zh-CN" class="active"><span data-i18n="CURRENT_LANGUAGE">中文</span></li>
+                        </ul>
+                    </div>
+                    <button id="btn-account" style="display: none"></button>
+                    <a href="./center.html" class="btn btn-primary" data-i18n="ACCOUNT" style="line-height: 50px">用戶中心</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-container">
+            <div class="container">
+
+                <section id="anchor-home" class="section">
+                    <div class="title">
+                        <h1 data-i18n="SECTION_HOME_TITLE"></h1>
+                        <p data-i18n="SECTION_HOME_SUBTITLE"></p>
+                    </div>
+                    <div class="white-paper">
+                        <div style="display: inline-block; padding: 20px 0">
+                            <p data-i18n="SECTION_HOME_DESC">ddssd</p>
+                            <p data-i18n="SECTION_HOME_DESC2">sdds</p>
+                        </div>
+                        <div class="top-menu">
+
+                            <a class="btn btn-primary-ghost btn-hover-glow project btn-documents" href="javascript:void(0);" data-i18n="DICT_XMZC" style="float: right; margin-top: 18px">项目主创</a>
+                            <a class="btn btn-primary-ghost btn-hover-glow project2" target="_blank" style="float: right; margin-right: 10px; margin-top: 18px" href="./src/2018ESS.pdf" download="2018ESS.pdf">PDF</a>
+                            <a class="btn btn-primary-ghost btn-hover-glow project2" target="_blank" style="float: right; margin-right: 10px; margin-top: 18px" href="./src/white-paper-en.pdf" download="white-paper-en.pdf" data-i18n-href="SECTION_HOME_DOWNLOAD_WHITEPAPER_HREF_EN">WHITE PAPER</a>
+                            <a class="btn btn-primary-ghost btn-hover-glow project2" target="_blank" style="float: right; margin-right: 10px; margin-top: 18px" href="./src/white-paper.pdf" download="white-paper.pdf" data-i18n-href="SECTION_HOME_DOWNLOAD_WHITEPAPER_HREF" data-i18n="SECTION_HOME_DOWNLOAD_WHITEPAPER">下載白皮書</a>
+
+                        </div>
+
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="video-container" style="width: 100%; min-height: 120px; margin-top: 10px; background: #001e3b url(./src/video1-bg.jpg) 0 0/100% 100% no-repeat;">
+                        <video src="./src/movie-480.mp4" width="100%" id="video1" autoplay autobuffer></video>
+                        <!--autoplay loop-->
+                        <div class="btn-play show"></div>
+                        <div class="mask"></div>
+                    </div>
+                    <div class="presale-process" id="presale-process">
+                        <!-- <h2>PRESALE PROCESS</h2>
+            <div class='progress-bar'>
+              <div class='current' id='sale-progress'></div>
+            </div>
+            <p><span id='sold-amount'>0</span> INC sold to strategic partners</p> -->
+                        <!--<footer>
+                        <div class="left">
+                            <ul>
+                                <li class="facebook">
+                                    <a target="_blank" href="https://www.facebook.com/influencechain/"></a>
+                                </li>
+                                <li class="wechat">
+                                    <a href="javascript:;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            &lt;!&ndash; <div id='btn-preregister' class='btn btn-primary-ghost btn-hover-glow'>PRE-REGISTER</div> &ndash;&gt;
+                        </div>
+                    </footer>-->
+                    </div>
+                </section>
+
+
+                <!--市场详情-->
+                <section id="section-influencer" class="section">
+                    <div class="grid">
+                        <div class="item article">
+                            <h4 data-i18n="DICT_CYJJ">產業聚焦</h4>
+                            <div>
+                                <p data-i18n="DICT_CYJJ_DL_1"></p>
+                                <p data-i18n="DICT_CYJJ_DL_2"></p>
+                                <!--<p>目前，知識產權保護領域，存在如下幾個痛點：</p>
+                            <p style="font-size: 12px; padding-left: 20px">1、保護難：大部分原創者深知打扮抄襲威脅，但傳統版權登記方式不僅耗時長而且費用高，對於互聯網創作者來說，實在不是一種划算的保護方式，因而大多數網絡創作者不登記，不保護，導致侵權頻發、版權時刻處於危險之中；</p>
+                            <p style="font-size: 12px; padding-left: 20px">2、舉證難：最氣人的是，抄抄們往往理直氣壯，要麼不理不管，要麼死不認證，碰到更無恥的還要求你拿出證據，而法律認可的證據往往是維權的關鍵；</p>
+                            <p style="font-size: 12px; padding-left: 20px">3、維權難：平台投訴手續複雜，法律訴訟成本高…….大多數原創者因此保持沈默，任由權利被侵犯。</p>-->
+                            </div>
+                            <div style="text-align: right; padding: 0 20px 0 0"><a href="#anchor-market" class="btn btn-primary-ghost btn-hover-glow button anchor-btn" style="background-color: transparent" data-i18n="DICT_CYJJ_BTN">市場痛點</a></div>
+
+                            <h4 data-i18n="DICT_YYCJ">應用場景</h4>
+                            <div style="color: #aba7ff!important;">
+                                <p data-i18n="DICT_YYCJ_DL_01"></p>
+                                <!--<p>1、確權：</p>
+                            <p>知識財產權的確認是依照法律、政策的規定，經過資產申報、權屬調查、審核批准、註冊等登記流程，確認某種資產的所有權、使用權。</p>
+                            <p>2、交易：</p>
+                            <p>知識產權的交易是指在ESS的區塊鏈中各種知識產權的消費，所有權轉移、租賃等行為。</p>
+                            <p>3、打賞：</p>
+                            <p>打賞是互聯網新興的個人非強制性的消費模式，例如使用者對於創作者的打賞，以及現實中的餐廳、酒吧、KTV、景區等。</p>
+                            <p>4、眾籌：</p>
+                            <p>由發起人、跟投人、平台構成。具有低門檻、多樣性、依據大眾力量、注重創意的特徵，是指一種向群眾募資，以支持發起的個人或組織的行為。</p>
+                            <p>5、眾包：</p>
+                            <p>眾包指的是一個公司或機構把過去由員工執行的工作任務以自由自願的形式外包給非特定的(而且通常是大型的)大眾網絡的做法。</p>-->
+                            </div>
+                            <div style="text-align: right; padding: 0 20px 0 0"><a href="#anchor-scene" class="btn btn-primary-ghost btn-hover-glow button anchor-btn" style="background-color: transparent" data-i18n="DICT_YYCJ_BTN">應用場景</a></div>
+                        </div>
+                        <div class="item article">
+                            <h4 data-i18n="DICT_XMJS">項目介紹</h4>
+                            <div style=" color: #aba7ff!important;">
+                                <!--<p>本項目由台灣鴻海科技集團事業群總經理、富士康科技集團全球副總裁，凌志平先生主導並監督執行。</p>
+                        <p>台灣鴻海集團又稱台灣鴻海精密工業股份有限公司，在我國大陸的主產業為富士康科技集團。是全球3C（電腦、通訊、消費性電子）代工領域規模最大、成長最快、評價最高的國際集團，其前身是1974年成立的台灣鴻海塑膠企業有限公司。</p>-->
+                                <p data-i18n="DICT_XMJS_DL_01">凌志平先生在項目發起前指出：「將區塊鏈技術應用於知識產權領域，尤其是針對保護原創的文字、聲音、圖片、影像、專利、郵件發送即信息傳遞等內容，將起到前所未有的積極作用。</p>
+                                <p data-i18n="DICT_XMJS_DL_02"></p>
+                                <p data-i18n="DICT_XMJS_DL_03">ESS是基於以太坊智慧合約基礎上的國際技術領先的區塊鏈項目，是一個智慧的原創溯源平台，ESS由基礎層、架構層、應用層三層組成。</p>
+                                <!--<p style="font-size: 12px; padding-left: 20px">1）搭建ESS鏈的基礎層技術。</p>
+                            <p style="font-size: 12px; padding-left: 20px">2）在其上構建具有極高可擴展性的業務支撐系統。</p>
+                            <p style="font-size: 12px; padding-left: 20px">3）打造智慧移動端的線上應用。通俗一點講，ESS區塊鏈版權登記相當於利用區塊鏈的去中心化技術特徵，為原創作品嵌入16進制的密鑰，這個密碼會同時儲存在區塊鏈的所有電腦上，即相當於為原創作品登記了一張「電子身份證」，且永久有效，無法篡改。</p>-->
+                            </div>
+                            <div style="text-align: right; padding: 0 20px 0 0"><button class="btn btn-primary btn-hover-glow btn-documents button" style="margin-right: 10px" data-i18n="DICT_XMJS_BTN1">項目主創</button> <a href="#anchor-project" class="btn btn-primary-ghost btn-hover-glow button anchor-btn"
+                                    style="background-color: transparent" data-i18n="DICT_XMJS_BTN2">解決方案</a></div>
+
+                            </p>
+                        </div>
+                        <div class="item article3">
+                            <h4 style="opacity: 0.5; color: #aba7ff" data-i18n="DICT_SP">視頻</h4>
+                            <div style="text-align: center">
+                                <div style="width: 80%; min-height: 80px; background: #001e3b url(./src/video2-bg.jpg) 0 0/100% 100% no-repeat; margin: auto; margin: 20px auto; position: relative; text-align: center">
+                                    <video id="video2" width="100%" style="width: 100%; margin: auto" autobuffer>
+                                    <source src="./src/video.mp4" type="video/mp4">
+                                    <source src="./src/video.ogg" type="video/ogg">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                    <!--autoplay loop-->
+                                    <!--<div style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background:url(./src/play.png) center center/60px 60px no-repeat; cursor: pointer" id="hook-play-btn"></div>-->
+                                </div>
+                                <!--<img src="./src/team-01.jpg" style="width: 280px!important; height: 180px; margin: 20px 0 0 50px">-->
+                                <div style="padding: 0 40px 0 0; box-sizing: border-box; width: 100%; text-align: right; color: #aba7ff; opacity: 0.5" data-i18n="DICT_SP_DES">凌志平先生致詞</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <!--市場痛點-->
+                <section id="section-problem" class="section">
+                    <div id="anchor-market" name="anchor-market" class="anchor"></div>
+                    <a id="anchor-market2" name="anchor-market2"></a>
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="SECTION_PROBLEM_TITLE">市場痛點</h1>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="chart">
+                            <img data-i18n-src="IMG_PROBLEM" src="./src/problem-cn.png" alt="">
+                        </div>
+                        <div class="details">
+                            <h2 data-i18n="SECTION_PROBLEM_SUB_TITLE">確權、舉證、維權成本</h2>
+                            <p data-i18n="SECTION_PROBLEM_DESC"></p>
+                            <ol>
+                                <li data-i18n="SECTION_PROBLEM_LIST_ITEM_1">確權難。大部分創作者雖然深知盜版抄襲威脅，但傳統版權登記方式不僅耗時長而且費用高，對於互聯網創作者來說實在不是一種划算的保護方式，因而大多數網路創作者不登記、不保護，導致侵權頻發、版權時刻處於危險之中；</li>
+                                <li data-i18n="SECTION_PROBLEM_LIST_ITEM_2">舉證難。最氣人的是，抄襲者往往理直氣壯，要麼不理不管，要麼死不認證，碰到更無恥還要求你拿出證據，而被法律認可的證據往往是維權的關鍵；</li>
+                                <li data-i18n="SECTION_PROBLEM_LIST_ITEM_3">維權成本高。平臺投訴手續的複雜，法律訴訟成本更高……大多數原創者因此選擇保持沉默，任由權利被侵犯</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="section-solution" class="section">
+                    <div id="anchor-project" class="anchor"></div>
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="SECTION_SOLUTION_TITLE">我們的解決方案</h1>
+                        </div>
+                    </div>
+                    <div class="content content-rtl">
+                        <div class="chart">
+                            <img data-i18n-src="IMG_SOLUTION" src="./src/solution-cn.png" alt="">
+                        </div>
+                        <div class="details">
+                            <!--<h2 data-i18n="SECTION_SOLUTION_SUB_TITLE"></h2>-->
+                            <ol>
+                                <li>
+                                    <h4 data-i18n="SECTION_SOLUTION_LIST_TIT_1">區塊鏈時間戳</h4>
+                                    <div data-i18n="SECTION_SOLUTION_LIST_ITEM_1">利用區塊鏈時間戳記建立“數位身份證”，從源頭保護原創版權，滿足後續維權和版權變現等需求。</div>
+                                </li>
+                                <li>
+                                    <h4 data-i18n="SECTION_SOLUTION_LIST_TIT_2">區塊鏈溯源</h4>
+                                    <div data-i18n="SECTION_SOLUTION_LIST_ITEM_2">利用區塊鏈可追蹤性、公開、透明的特點，實現網路傳播的源頭追溯，舉證輕鬆解決。</div>
+                                </li>
+                                <li>
+                                    <h4 data-i18n="SECTION_SOLUTION_LIST_TIT_3">低成本維權</h4>
+                                    <div data-i18n="SECTION_SOLUTION_LIST_ITEM_3">區塊鏈平臺幾乎零成本，完全免去了以往令維權者頭痛的各種維權成本。</div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!--團隊-->
+                <!--anchor-team-->
+                <section id="anchor-team" class="section">
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="SECTION_INNOVATION_TITLE">項目團隊</h1>
+                        </div>
+                    </div>
+                    <h2 data-i18n="TEAM_01_TIT">技術團隊</h2>
+                </section>
+
+                <section id="section-influencer" class="section">
+                    <div class="grid2">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="./src/team-js-02.jpg" alt="">
+                            </div>
+                            <div class="team">
+                                <h4 data-i18n="TEAM_01_02_NAME"></h4>
+                                <div data-i18n="TEAM_01_02_DEC"></div>
+                                <div data-i18n="TEAM_01_02_DEC_02"></div>
+                                <div data-i18n="TEAM_01_02_DEC_03"></div>
+                                <div data-i18n="TEAM_01_02_DEC_04"></div>
+                                <div data-i18n="TEAM_01_02_DEC_05"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <img src="./src/team-js-03.jpg" alt="">
+                            </div>
+                            <div class="team">
+                                <h4 data-i18n="TEAM_01_03_NAME"></h4>
+                                <div data-i18n="TEAM_01_03_DEC"></div>
+                                <div data-i18n="TEAM_01_03_DEC_02"></div>
+                                <div data-i18n="TEAM_01_03_DEC_03"></div>
+                                <div data-i18n="TEAM_01_03_DEC_04"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="section-influencer" class="section">
+
+                    <div class="grid jishu">
+                        <div class="item">
+                            <img src="./src/team-js-01.jpg" alt="">
+                            <h4 data-i18n="TEAM_01_01_NAME"></h4>
+                            <div data-i18n="TEAM_01_01_DEC"></div>
+                            <div data-i18n="TEAM_01_01_DEC_02"></div>
+                            <div data-i18n="TEAM_01_01_DEC_03"></div>
+                        </div>
+                        <div class="item">
+                            <img src="./src/team-js-02.jpg" alt="">
+                            <h4 data-i18n="TEAM_01_02_NAME"></h4>
+                            <div data-i18n="TEAM_01_02_DEC"></div>
+                            <div data-i18n="TEAM_01_02_DEC_02"></div>
+                            <div data-i18n="TEAM_01_02_DEC_03"></div>
+                            <div data-i18n="TEAM_01_02_DEC_04"></div>
+                            <div data-i18n="TEAM_01_02_DEC_05"></div>
+                        </div>
+                        <div class="item">
+                            <img src="./src/team-js-03.jpg" alt="">
+                            <h4 data-i18n="TEAM_01_03_NAME"></h4>
+                            <div data-i18n="TEAM_01_03_DEC"></div>
+                            <div data-i18n="TEAM_01_03_DEC_02"></div>
+                            <div data-i18n="TEAM_01_03_DEC_03"></div>
+                            <div data-i18n="TEAM_01_03_DEC_04"></div>
+                        </div>
+                    </div>
+                </section>
+                <!--anchor-team-->
+                <section id="anchor-team" class="section">
+                    <h2 data-i18n="TEAM_02_TIT">財務團隊</h2>
+                    <div class="grid">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="./src/team-cw-01.jpg" alt="">
+                            </div>
+                            <div class="flex">
+                                <strong data-i18n="TEAM_02_NAME"></strong>
+                                <p data-i18n="TEAM_02_DEC"></p>
+                                <p data-i18n="TEAM_02_DEC_001"></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <img src="./src/team-02.jpg" alt="">
+                            </div>
+                            <div>
+                                <strong data-i18n="TEAM_02_NAME_02"></strong>
+                                <p data-i18n="TEAM_02_DEC_02"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 data-i18n="TEAM_03_TIT">法律團隊</h2>
+                    <div class="grid">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="./src/team-fl-01.jpg" alt="">
+                            </div>
+                            <div class="flex">
+                                <strong data-i18n="TEAM_03_NAME"></strong>
+                                <p data-i18n="TEAM_03_DEC"></p>
+                                <p data-i18n="TEAM_03_DEC_2"></p>
+                                <p data-i18n="TEAM_03_DEC_3"></p>
+                                <p data-i18n="TEAM_03_DEC_4"></p>
+                                <p data-i18n="TEAM_03_DEC_5"></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <button class="btn btn-primary btn-hover-glow btn-documents hook-documents" data-i18n="TEAM_03_BTN">法律文書</button>
+                        </div>
+                    </div>
+                    <!--<h2 data-i18n="TEAM_04_TIT">顧問團隊</h2>
+                <div class="grid">
+                    <div class="item">
+                        <div class="icon">
+                            <img src="./src/team-gw-01.jpg" alt="">
+                        </div>
+                        <div>
+                            <strong data-i18n="TEAM_04_01_NAME"></strong>
+                            <p data-i18n="TEAM_04_01_DEC"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="./src/team-gw-02.jpg" alt="">
+                        </div>
+                        <div>
+                            <strong data-i18n="TEAM_04_02_NAME"></strong>
+                            <p data-i18n="TEAM_04_02_DEC"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="./src/team-gw-03.jpg" alt="">
+                        </div>
+                        <div>
+                            <strong data-i18n="TEAM_04_03_NAME"></strong>
+                            <p data-i18n="TEAM_04_03_DEC"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="./src/team-gw-04.jpg" alt="">
+                        </div>
+                        <div>
+                            <strong data-i18n="TEAM_04_04_NAME"></strong>
+                            <p data-i18n="TEAM_04_04_DEC"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="./src/team-gw-05.jpg" alt="">
+                        </div>
+                        <div>
+                            <strong data-i18n="TEAM_04_05_NAME"></strong>
+                            <p data-i18n="TEAM_04_05_DEC"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="./src/team-gw-06.jpg" alt="">
+                        </div>
+                        <div>
+                            <strong data-i18n="TEAM_04_06_NAME"></strong>
+                            <p data-i18n="TEAM_04_06_DEC"></p>
+                        </div>
+                    </div>
+                </div>-->
+                </section>
+
+
+
+
+                <!--用途-->
+                <section id="section-influencer" class="section">
+                    <div id="anchor-use" class="anchor"></div>
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="DBYT_TIT">代币用途</h1>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="item">
+                            <h4 data-i18n="DBYT_DL_TIT"></h4>
+                            <p data-i18n="DBYT_DL_DEC"></p>
+                        </div>
+                        <div class="item">
+                            <h4 data-i18n="DBYT_DL_TIT_02"></h4>
+                            <p data-i18n="DBYT_DL_DEC_02"></p>
+                        </div>
+                        <div class="item">
+                            <h4 data-i18n="DBYT_DL_TIT_03"></h4>
+                            <p data-i18n="DBYT_DL_DEC_03"></p>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+                <section id="section-buyclub" class="section">
+                    <div id="anchor-scene" class="anchor"></div>
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="SECTION_BUYCLUB_TITLE">基於Token的應用- Ether show</h1>
+                        </div>
+                    </div>
+                    <div class="intro">
+                        <div class="desc">
+                            <p data-i18n="SECTION_BUYCLUB_SUB_TITLE">Ether show 是針對知識產權保護而推出的區塊鏈系統，基於區塊鏈以太坊技術，結合時間戳、區塊鏈溯源及專利保護於一體的價值互聯網體系。</p>
+                        </div>
+                        <div class="shadow">
+                            <p>Application of </p>
+                            <p>block chain</p>
+                            <p>for</p>
+                            <p>Intellectual property rights</p>
+
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <img src="./src/buyclub.png" alt="">
+                    </div>
+                </section>
+
+
+
+
+
+                <!--<section id="section-partners" class="section">-->
+                <!--<div id="anchor-cooperation" class="anchor"></div>-->
+                <!--<div class="title-container">-->
+                <!--<div class="title-wrapper">-->
+                <!--<h1 data-i18n="SECTION_PARTNER_TITLE">战略合作</h1>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="grid">-->
+                <!--<div class="item">-->
+                <!--<div class="photo">-->
+                <!--<img src="./src/partners-1.png" alt="">-->
+                <!--</div>-->
+                <!--<p data-i18n="SECTION_PARTNER_INTRO_1">-->
+                <!--Anomaly是一家於2004年在紐約成立的廣告代理商。該代理商在洛杉磯、紐約、多倫多、倫敦、阿姆斯特丹和上海均設有辦事處。</p>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                <!--<div class="photo">-->
+                <!--<img src="./src/partners-2.png" alt="">-->
+                <!--</div>-->
+                <!--<p data-i18n="SECTION_PARTNER_INTRO_2">金科（代碼：837901）成立於2013年，是中國最年輕的新三板(NEEQ)上市公司。</p>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                <!--<div class="photo">-->
+                <!--<img src="./src/partners-3.png" alt="">-->
+                <!--</div>-->
+                <!--<p data-i18n="SECTION_PARTNER_INTRO_3">全球區塊鏈研究中心，簡稱GBC，是一家專事區塊鏈研究的獨立機構，致力於區塊鏈行業的發展。</p>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                <!--<div class="photo">-->
+                <!--<img src="./src/partners-4.png" alt="">-->
+                <!--</div>-->
+                <!--<p data-i18n="SECTION_PARTNER_INTRO_4">Alphacat-->
+                <!--將是世界上第一個基於數字貨幣的量化投資平台，也是世界上第一個機器人交易機制，利用人工智能和大數據實施交易和投資管理。</p>-->
+                <!--</div>-->
+
+                <!--</div>-->
+                <!--</section>-->
+
+                <section id="section-documentation" class="section">
+                    <div id="anchor-book" class="anchor"></div>
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="SECTION_DOCUMENT_TITLE">白皮書</h1>
+                        </div>
+                    </div>
+                    <div class="content content-rtl">
+                        <div class="chart">
+                            <img src="./src/whitepaper.png" alt="">
+                        </div>
+                        <div class="details">
+                            <a class="btn btn-primary btn-hover-glow" target="_blank" download="white-book-en.pdf" data-i18n-href="SECTION_DOCUMENT_DOWNLOAD_HREF" data-i18n="SECTION_DOCUMENT_DOWNLOAD">白皮書下載</a>
+                            <!-- <p>Influence Exchange is the world's first and largest Influence Digital Assets trading platform.Influence Exchange is the world's first and largest Influence Digital Assets trading platform.</p> -->
+                        </div>
+                    </div>
+                </section>
+
+                <section id="section-inc-token" class="section">
+                    <div id="anchor-etss" class="anchor"></div>
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="ESS_TITLE">以太秀秀</h1>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="charts">
+                            <div class="chart">
+                                <img data-i18n-src="IMG_INC_TOKEN_1" src="./src/inc-token-1-cn.png" alt="">
+                            </div>
+                            <div class="chart">
+                                <img data-i18n-src="IMG_INC_TOKEN_2" src="./src/inc-token-2-cn.png" alt="">
+                            </div>
+                        </div>
+                        <div class="schedule">
+                            <table>
+                                <caption data-i18n="ESS_TITLE_02">天使輪參與者</caption>
+                                <tbody>
+                                    <tr>
+                                        <td>2018.1.1 - 2018.1.30</td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_TYPE">天使輪</td>
+                                        <td data-i18n="ESS_LIST_NAME_01"></td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_STATUS">參與完成</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018.1.1 - 2018.1.30</td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_TYPE">天使輪</td>
+                                        <td data-i18n="ESS_LIST_NAME_02"></td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_STATUS">參與完成</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018.1.1 - 2018.1.30</td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_TYPE">天使輪</td>
+                                        <td data-i18n="ESS_LIST_NAME_03"></td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_STATUS">參與完成</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018.1.1 - 2018.1.30</td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_TYPE">天使輪</td>
+                                        <td data-i18n="ESS_LIST_NAME_04"></td>
+                                        <td valign="top" style="white-space: nowrap" data-i18n="ESS_LIST_STATUS">參與完成</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="section-roadmap" class="section">
+                    <div id="anchor-time" class="anchor"></div>
+                    <div class="title-container">
+                        <div class="title-wrapper">
+                            <h1 data-i18n="SECTION_ROADMAP_TITLE">推廣計劃</h1>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="item">
+                            <h2 data-i18n="SECTION_ROADMAP_STEP_TITLE_1">深圳 01月20日</h2>
+                            <p class="brief" data-i18n="SECTION_ROADMAP_STEP_DESC_1">2018年首界中國區塊鏈應用峰會</p>
+                            <aside>
+                                <img src="./src/roadmap-1.jpg" alt="">
+                                <p class="time">Jan.20.2018</p>
+                            </aside>
+                        </div>
+                        <div class="item">
+                            <h2 data-i18n="SECTION_ROADMAP_STEP_TITLE_2">澳門 02月04日</h2>
+                            <p class="brief" data-i18n="SECTION_ROADMAP_STEP_DESC_2">2018年區塊鏈項目綜合路演推介儀式</p>
+                            <aside>
+                                <img src="./src/roadmap-2.jpg" alt="">
+                                <p class="time">Feb.04.2018</p>
+                            </aside>
+                        </div>
+                        <div class="item">
+                            <h2 data-i18n="SECTION_ROADMAP_STEP_TITLE_3">台灣 02月05日</h2>
+                            <p class="brief" data-i18n="SECTION_ROADMAP_STEP_DESC_3">待定</p>
+                            <aside>
+                                <img src="./src/roadmap-3.jpg" alt="">
+                                <p class="time">Feb.05.2018</p>
+                            </aside>
+                        </div>
+                        <div class="item">
+                            <h2 data-i18n="SECTION_ROADMAP_STEP_TITLE_4">待續</h2>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section id="section-follow">
+                    <div id="anchor-statement" class="anchor"></div>
+                    <h1 data-i18n="SECTION_FOLLOW_TITLE_1">免責聲明</h1>
+                    <!--<h1 data-i18n="SECTION_FOLLOW_TITLE_2">Influence Chain更新資訊</h1>-->
+                    <ul class="share">
+                        <li class="facebook">
+                            <a target="_blank" href="https://www.facebook.com/influencechain/"></a>
+                        </li>
+                        <li class="wechat">
+                            <a href="javascript:;"></a>
+                        </li>
+                    </ul>
+                    <div class="detail" data-i18n="STATEMENT">
+                        該网站只用于傳達資訊之途，並不構成本專案買賣的相關意見。以上資訊或分析不構成投資決策。 本网站不構成任何投資建議，投資意向或教唆投資。 本文檔不組成也不理解為提供任何買賣證券的行為，也不是任何形式上的合約或者承諾。 相關意向用戶明確瞭解本項目的風險，投資者一旦參與投資即表示瞭解並接受該項目風險， 並願意個人為此承擔一切相應結果或後果。 運營團隊不承擔任何參與本專案造成的直接或間接的損失。
+                    </div>
+                    <!--<div class="contact">
+                    <img src="./src/icon-email-dark.svg" alt="">
+                    <div class="emails">
+                        <p>service@influencechain.org</p>
+                        <p>business@influencechain.org</p>
+                    </div>
+                </div>-->
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        <span href="javascript:;" data-i18n="FOOTER_POLICY"></span>
+                    </p>
+                    <p><span data-i18n="FOOTER_FUNDATION"></span></p>
+                </footer>
+
+            </div>
+        </main>
+
+        <div class="dialog-mask"></div>
+
+        <div class="dialog" id="dialog-login">
+            <div class="btn-close"></div>
+            <ul class="tabs">
+                <li class="tab active" data-i18n="DIALOG_LOGIN_TITLE">登錄</li>
+                <li class="tab" data-i18n="DIALOG_REGISTER_TITLE">註冊</li>
+            </ul>
+            <div class="form">
+                <div class="form-group" id="login-email">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_LOGIN_EMAIL" placeholder="郵箱">
+                    </div>
+                </div>
+                <div class="form-group" id="login-password">
+                    <div class="input-wrapper">
+                        <input type="password" data-i18n-placeholder="DIALOG_LOGIN_PASSWORD" placeholder="密碼">
+                    </div>
+                </div>
+                <div class="form-group image-captcha" id="login-captcha-image">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_LOGIN_IMAGE_CAPTCHA" placeholder="圖形驗證碼">
+                    </div>
+                    <img src="./src/vercode" alt="">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="btn-login" data-i18n="DIALOG_LOGIN_BTN_LOGIN">登錄</button>
+                </div>
+                <div class="form-group options">
+                    <label for="login-remember" class="checkbox">
+                    <input type="checkbox" id="login-remember">
+                    <span data-i18n="DIALOG_LOGIN_REMEMBER">記住我</span>
+                </label>
+                    <a href="javascript:;" data-i18n="DIALOG_LOGIN_FORGET">忘記密碼？</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog" id="dialog-register">
+            <div class="btn-close"></div>
+            <ul class="tabs">
+                <li class="tab" data-i18n="DIALOG_LOGIN_TITLE">登錄</li>
+                <li class="tab active" data-i18n="DIALOG_REGISTER_TITLE">註冊</li>
+            </ul>
+            <div class="form">
+                <div class="form-group" id="register-email">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_REGISTER_EMAIL" placeholder="郵箱">
+                    </div>
+                </div>
+                <div class="form-group" id="register-password">
+                    <div class="input-wrapper">
+                        <input type="password" data-i18n-placeholder="DIALOG_REGISTER_PASSWORD" placeholder="密碼">
+                    </div>
+                </div>
+                <div class="form-group image-captcha" id="register-captcha-image">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_REGISTER_IMAGE_CAPTCHA" placeholder="圖形驗證碼">
+                    </div>
+                    <img src="./src/vercode" alt="">
+                </div>
+                <div class="form-group email-captcha" id="register-captcha-email">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_REGISTER_EMAIL_CAPTCHA" placeholder="郵箱驗證碼">
+                    </div>
+                    <button class="btn btn-primary" data-i18n="GET_CODE">獲取驗證碼</button>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="btn-register" data-i18n="DIALOG_REGISTER_BTN_REGISTER">註冊</button>
+                </div>
+                <div class="form-group options">
+                    <span data-i18n="DIALOG_REGISTER_CAN_NOT_REGISTER">無法註冊？</span>
+                </div>
+                <div class="form-group" id="register-helper">
+                    <p><span data-i18n="DIALOG_REGISTER_REGISTER_HELPER_1">將您的郵箱、姓名、身份證號、身份證照片發送到</span><span class="highlight">service@influencechain.org</span><span data-i18n="DIALOG_REGISTER_REGISTER_HELPER_2">。我們將在 2 個工作日內完成驗證，並將您的登錄信息發送到您的郵箱</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog" id="dialog-forget">
+            <div class="btn-close"></div>
+            <ul class="tabs">
+                <li class="tab active" data-i18n="DIALOG_FORGET_TITLE">重置密碼</li>
+            </ul>
+            <div class="form">
+                <div class="form-group" id="reset-email">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_FORGET_EMAIL" placeholder="郵箱">
+                    </div>
+                </div>
+                <div class="form-group image-captcha" id="reset-captcha-image">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_FORGET_IMAGE_CAPTCHA" placeholder="圖形驗證碼">
+                    </div>
+                    <img src="./src/vercode" alt="">
+                </div>
+                <div class="form-group email-captcha" id="reset-captcha-email">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_FORGET_EMAIL_CAPTCHA" placeholder="郵箱驗證碼">
+                    </div>
+                    <button class="btn btn-primary" data-i18n="GET_CODE">獲取驗證碼</button>
+                </div>
+                <div class="form-group" id="reset-password">
+                    <div class="input-wrapper">
+                        <input type="password" data-i18n-placeholder="DIALOG_FORGET_PASSWORD" placeholder="密碼">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="btn-reset" data-i18n="DIALOG_FORGET_BTN_RESET">重置</button>
+                </div>
+                <div class="form-group options">
+                    <span data-i18n="DIALOG_FORGET_BACK_TO_LOGIN">返回登錄</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog" id="dialog-authentication">
+            <div class="btn-close"></div>
+            <ul class="tabs">
+                <li class="tab active" data-i18n="DIALOG_AUTHENTICATION_TITLE">身份認證</li>
+            </ul>
+            <p class="dialog-desc" data-i18n="DIALOG_AUTHENTICATION_SUB_TITLE">提交申購錢請先進行身份認證</p>
+            <div class="form">
+                <div class="form-group" id="authentication-realname">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_AUTHENTICATION_REALNAME" placeholder="真實姓名">
+                    </div>
+                </div>
+                <div class="form-group" id="authentication-id-number">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_AUTHENTICATION_ID_NUMBER" placeholder="證件號">
+                    </div>
+                </div>
+                <div class="form-group" id="authentication-country">
+                    <div class="select-wrapper">
+                        <select>
+                        <option value="">- 選擇國家 -</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia (Plurinational State of)">Bolivia (Plurinational State of)</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cabo Verde">Cabo Verde</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="China Hongkong">China Hongkong</option>
+                        <option value="China Macao">China Macao</option>
+                        <option value="China Taiwan">China Taiwan</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Côte D" ivoire
+                        '="">Côte D'Ivoire</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Democratic People" s="" republic="" of="" korea
+                        '="">Democratic People's Republic of Korea</option>
+                        <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea Bissau">Guinea Bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Holy See">Holy See</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People’s Democratic Republic">Lao People’s Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libya">Libya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia (Federated States of)">Micronesia (Federated States of)</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Republic of Korea">Republic of Korea</option>
+                        <option value="Republic of Moldova">Republic of Moldova</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South ‎Sudan">South ‎Sudan</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="State of Palestine">State of Palestine</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="The former Yugoslav Republic of Macedonia">The former Yugoslav Republic of
+                            Macedonia
+                        </option>
+                        <option value="Timor-Leste">Timor-Leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom of Great Britain and Northern Ireland">United Kingdom of Great
+                            Britain and Northern Ireland
+                        </option>
+                        <option value="United Republic of Tanzania">United Republic of Tanzania</option>
+                        <option value="United States of America">United States of America</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela (Bolivarian Republic of)">Venezuela (Bolivarian Republic of)</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select>
+                        <span class="value default"></span>
+                    </div>
+                </div>
+                <div class="form-group" id="authentication-id-photo">
+                    <div class="file-input-container">
+                        <div class="file-input-button" data-i18n="DIALOG_AUTHENTICATION_UPLOAD">請上傳證件照片</div>
+                        <input type="file" accept="image/*">
+                        <p class="hint" data-i18n="DIALOG_AUTHENTICATION_UPLOAD_HINT">請上傳您的身份證或者護照的圖片</p>
+                        <div class="img-preview">
+                            <img src="#" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group image-captcha" id="authentication-captcha-image">
+                    <div class="input-wrapper">
+                        <input type="text" data-i18n-placeholder="DIALOG_AUTHENTICATION_IMAGE_CAPTCHA" placeholder="圖形驗證碼">
+                    </div>
+                    <img src="#" alt="">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="btn-authentication">DONE</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog" id="dialog-wechat-qrcode">
+            <div class="btn-close"></div>
+            <div class="qrcode-container">
+                <div class="qrcode-wrapper">
+                    <img src="./src/wechat-qrcode.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="src/script.min.8cf8fe3e.js"></script>
+    <!--<script type="text/javascript" async="" src="./src/zi5rzkp9"></script>-->
+    <script src="./src/jquery-3.2.1.min.js"></script>
+    <script>
+        (function() {
+            var btn = $('.btn-documents');
+            var win = $('#hook-documents-win');
+            btn.on('click', function() {
+                win.show()
+            });
+            win.on('click', function() {
+                win.hide()
+            });
+
+            var ESS1 = document.getElementById("video1");
+            var video2 = document.getElementById("video2"); //var video2_play_btn = $('#hook-play-btn');
+
+            $(video2).on('click', function() {
+                video1.pause();
+                video2.play();
+            });
+            $(video1).on('click', function() {
+                video2.pause();
+                video1.play();
+            });
+        }());
+    </script>
+    <script src="./src/polyfill.js"></script>
+    <script src="./src/dict.js?v=11"></script>
+    <script src="./src/index.js?v=1"></script>
+
+    <!--<script id="wappalyzer" src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script>-->
+
+</body>
+
+</html>
